@@ -40,9 +40,24 @@ public class LionTest {
 
     @Test
     public void test() throws Exception {
+        createLionObjectTest();
         getKittensTest();
         doesHaveManeTest();
         getFoodTest();
+    }
+
+    public void createLionObjectTest() throws Exception {
+        try
+        {
+            Lion lion = new Lion(feline, sex);
+            boolean isLionObject = lion instanceof Lion;
+            Assert.assertEquals(true, isLionObject);
+        }
+        catch( final Exception e )
+        {
+            final String msg = "Используйте допустимые значения пола животного - самей или самка";
+            Assert.assertEquals(msg, e.getMessage());
+        }
     }
 
     public void getKittensTest() throws Exception {
