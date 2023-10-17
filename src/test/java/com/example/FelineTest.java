@@ -18,4 +18,10 @@ public class FelineTest {
         Feline feline = new Feline();
         Assert.assertEquals("Кошачьи", feline.getFamily());
     }
+
+    @Test
+    public void getOneKittenTest() {
+        Feline feline = new Feline();
+        Assert.assertEquals(1, feline.getKittens());
+    }
 }

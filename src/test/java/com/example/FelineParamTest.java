@@ -26,7 +26,6 @@ public class FelineParamTest {
     @Test
     public void getKittensTest() {
         Feline feline = new Feline();
-        Assert.assertEquals(1, feline.getKittens());
         Assert.assertEquals(kittensCount, feline.getKittens(kittensCount));
     }
 }
